@@ -1,0 +1,3 @@
+Warning[203] D:\MPLABPROJECTS\LAB7.X\BONUS.ASM 59 : Found opcode in column 1. (goto)
+Warning[202] D:\MPLABPROJECTS\LAB7.X\BONUS.ASM 161 : Argument out of range.  Least significant bits used.
+Warning[205] D:\MPLABPROJECTS\LAB7.X\BONUS.ASM 166 : Found directive in column 1. (end)
