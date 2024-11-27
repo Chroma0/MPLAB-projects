@@ -1,0 +1,4 @@
+Warning[205] D:\MPLABPROJECTS\LAB3.X\BASIC.ASM 1 : Found directive in column 1. (List)
+Warning[207] D:\MPLABPROJECTS\LAB3.X\BASIC.ASM 6 : Found label after column 1. (initial)
+Warning[207] D:\MPLABPROJECTS\LAB3.X\BASIC.ASM 9 : Found label after column 1. (Arithmetic)
+Warning[207] D:\MPLABPROJECTS\LAB3.X\BASIC.ASM 13 : Found label after column 1. (Logical)

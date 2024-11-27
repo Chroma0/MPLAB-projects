@@ -1,0 +1,6 @@
+Warning[205] D:\MPLABPROJECTS\LAB1.X\ADVANCE.ASM 1 : Found directive in column 1. (List)
+Warning[207] D:\MPLABPROJECTS\LAB1.X\ADVANCE.ASM 7 : Found label after column 1. (initial)
+Warning[207] D:\MPLABPROJECTS\LAB1.X\ADVANCE.ASM 19 : Found label after column 1. (Loop)
+Warning[207] D:\MPLABPROJECTS\LAB1.X\ADVANCE.ASM 23 : Found label after column 1. (Increase)
+Warning[207] D:\MPLABPROJECTS\LAB1.X\ADVANCE.ASM 29 : Found label after column 1. (Decrease)
+Warning[207] D:\MPLABPROJECTS\LAB1.X\ADVANCE.ASM 35 : Found label after column 1. (fin)

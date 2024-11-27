@@ -1,0 +1,8 @@
+Warning[205] D:\MPLABPROJECTS\LAB3.X\ADVANCE.ASM 1 : Found directive in column 1. (List)
+Warning[207] D:\MPLABPROJECTS\LAB3.X\ADVANCE.ASM 6 : Found label after column 1. (initial)
+Warning[207] D:\MPLABPROJECTS\LAB3.X\ADVANCE.ASM 16 : Found label after column 1. (start)
+Warning[202] D:\MPLABPROJECTS\LAB3.X\ADVANCE.ASM 17 : Argument out of range.  Least significant bits used.
+Warning[202] D:\MPLABPROJECTS\LAB3.X\ADVANCE.ASM 18 : Argument out of range.  Least significant bits used.
+Warning[202] D:\MPLABPROJECTS\LAB3.X\ADVANCE.ASM 23 : Argument out of range.  Least significant bits used.
+Warning[202] D:\MPLABPROJECTS\LAB3.X\ADVANCE.ASM 24 : Argument out of range.  Least significant bits used.
+Warning[207] D:\MPLABPROJECTS\LAB3.X\ADVANCE.ASM 26 : Found label after column 1. (fin)

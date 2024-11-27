@@ -1,0 +1,3 @@
+Warning[205] D:\MPLABPROJECTS\LAB1.X\BASIC.ASM 1 : Found directive in column 1. (List)
+Warning[207] D:\MPLABPROJECTS\LAB1.X\BASIC.ASM 41 : Found label after column 1. (not_equal)
+Warning[207] D:\MPLABPROJECTS\LAB1.X\BASIC.ASM 45 : Found label after column 1. (fin)
