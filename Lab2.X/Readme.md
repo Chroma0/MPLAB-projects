@@ -20,7 +20,7 @@ Memory address [0x002], where the value should be the sum of the values at Data
 Memory addresses [0x001] and [0x017]. In a similar fashion, the value of [0x016] is 
 obtained by subtracting the value [0x017] from the value [0x001], i.e., [0x016] = 
 [0x001] – [0x017], and so on.
-### bonus
+### Bonus
 - Store the values 0xB5, 0xF8, 0x64, 0x7F, 0xA8, and 0x15 at Data Memory addresses 
 [0x100] to [0x105], respectively. Implement cocktail sort using at least one type of 
 indirect addressing register to arrange the above six values in ascending order. After 
