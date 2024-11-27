@@ -1,0 +1,27 @@
+Warning[205] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 1 : Found directive in column 1. (List)
+Warning[207] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 6 : Found label after column 1. (initial)
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 19 : Argument out of range.  Least significant bits used.
+Warning[207] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 21 : Found label after column 1. (minus_high)
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 23 : Argument out of range.  Least significant bits used.
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 27 : Argument out of range.  Least significant bits used.
+Warning[207] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 29 : Found label after column 1. (division_loop_high)
+Warning[207] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 35 : Found label after column 1. (division_loop_low)
+Warning[207] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 41 : Found label after column 1. (Fact)
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 42 : Argument out of range.  Least significant bits used.
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 44 : Argument out of range.  Least significant bits used.
+Warning[207] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 48 : Found label after column 1. (fun1)
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 49 : Argument out of range.  Least significant bits used.
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 50 : Argument out of range.  Least significant bits used.
+Warning[207] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 53 : Found label after column 1. (loop1)
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 54 : Argument out of range.  Least significant bits used.
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 59 : Argument out of range.  Least significant bits used.
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 64 : Argument out of range.  Least significant bits used.
+Warning[207] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 70 : Found label after column 1. (fun2)
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 71 : Argument out of range.  Least significant bits used.
+Warning[207] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 74 : Found label after column 1. (loop2)
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 75 : Argument out of range.  Least significant bits used.
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 80 : Argument out of range.  Least significant bits used.
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 81 : Argument out of range.  Least significant bits used.
+Warning[202] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 84 : Argument out of range.  Least significant bits used.
+Warning[207] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 90 : Found label after column 1. (fun_fin)
+Warning[207] D:\MPLABPROJECTS\LAB4.X\BONUS.ASM 92 : Found label after column 1. (finish)

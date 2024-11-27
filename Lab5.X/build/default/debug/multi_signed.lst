@@ -1,0 +1,142 @@
+
+
+Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
+                                                                                                           Thu Oct 19 10:32:51 2023
+
+
+     1                           	processor	18F4520
+     2                           	pagewidth 132
+     3                           	opt	flic
+     4                           	psect	udata_acs,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     5                           	psect	udata_bank0,global,class=BANK0,space=1,delta=1,lowdata,noexec
+     6                           	psect	udata_bank1,global,class=BANK1,space=1,delta=1,lowdata,noexec
+     7                           	psect	udata_bank2,global,class=BANK2,space=1,delta=1,lowdata,noexec
+     8                           	psect	udata_bank3,global,class=BANK3,space=1,delta=1,lowdata,noexec
+     9                           	psect	udata_bank4,global,class=BANK4,space=1,delta=1,lowdata,noexec
+    10                           	psect	udata_bank5,global,class=BANK5,space=1,delta=1,lowdata,noexec
+    11                           	psect	udata,global,class=RAM,space=1,delta=1,noexec
+    12                           	psect	code,global,reloc=2,class=CODE,delta=1
+    13                           	psect	data,global,reloc=2,class=CONST,delta=1,noexec
+    14                           	psect	edata,global,class=EEDATA,space=3,delta=1,noexec
+    15                           	psect	mytext,local,reloc=2,class=CODE,delta=1
+    16   000000                     
+    17                           	psect	edata
+    18   000000                     stk_offset	set	0
+    19   000000                     auto_size	set	0
+    20                           
+    21                           ; stack_auto defines a symbol /name/_offset which equates to the
+    22                           ; stack offset of the auto object in question
+    23   000000                     
+    24                           ; stack_param defines a symbol /name/_offset which equates to the
+    25                           ; stack offset of the parameter object in question
+    26   000000                     
+    27                           ; alloc_stack adjusts the SP to allocate space for auto objects
+    28                           ; it also links in to the btemp symbol so that can be used
+    29   000000                     
+    30                           ; restore_stack adjusts the SP to remove all auto and parameter
+    31                           ; objects from the stack prior to returning from a function
+    32   000000                     
+    33                           	psect	mytext
+    34   000602                     _multi_signed:
+    35                           	callstack 0
+    36   000602  6E03               	movwf	3,c
+    37   000604  BE03               	btfsc	3,7,c	; check if multiplicand is negative
+    38   000606  D003               	goto	preprocess_1
+    39   000608                     next_2:
+    40   000608  BE01               	btfsc	1,7,c	; check if multiplier is negative
+    41   00060A  D006               	goto	preprocess_2
+    42   00060C  D00C               	goto	start
+    43   00060E                     preprocess_1:
+    44   00060E  2A8A               	incf	3978,f,c	; LATB represent ans is pos or neg
+    45   000610  0EFF               	movlw	255	; WREG = 11111111(binary)
+    46   000612  1A03               	xorwf	3,f,c
+    47   000614  2A03               	incf	3,f,c
+    48   000616  D7F8               	goto	next_2
+    49   000618                     preprocess_2:
+    50   000618  2A8A               	incf	3978,f,c
+    51   00061A  0E02               	movlw	2
+    52   00061C  608A               	cpfslt	3978,c
+    53   00061E  5E8A               	subwf	3978,f,c
+    54   000620  0EFF               	movlw	255	; WREG = 11111111(binary)
+    55   000622  1A01               	xorwf	1,f,c
+    56   000624  2A01               	incf	1,f,c
+    57   000626                     start:
+    58   000626  0E04               	movlw	4
+    59   000628  6E89               	movwf	3977,c	; LATA = 4
+    60   00062A                     loop:
+    61   00062A  C003 FFE8          	movff	3,wreg
+    62   00062E  B001               	btfsc	1,0,c
+    63   000630  D00A               	goto	add
+    64   000632                     next:
+    65   000632  3603               	rlcf	3,f,c
+    66   000634  9003               	bcf	3,0,c
+    67   000636  3604               	rlcf	4,f,c
+    68   000638  4201               	rrncf	1,f,c
+    69   00063A  0689               	decf	3977,f,c
+    70   00063C  6689               	tstfsz	3977,c
+    71   00063E  D7F5               	goto	loop
+    72   000640  B08A               	btfsc	3978,0,c
+    73   000642  D006               	goto	sign_unsign
+    74   000644  D009               	goto	final
+    75   000646                     add:
+    76   000646  268C               	addwf	3980,f,c	; LATD represent lower 8 bits
+    77   000648  C004 FFE8          	movff	4,wreg
+    78   00064C  228B               	addwfc	3979,f,c	; LATC represent higher 8 bits
+    79   00064E  D7F1               	goto	next
+    80   000650                     sign_unsign:
+    81   000650  0EFF               	movlw	255
+    82   000652  1A8B               	xorwf	3979,f,c
+    83   000654  1A8C               	xorwf	3980,f,c
+    84   000656  2A8C               	incf	3980,f,c
+    85   000658                     final:
+    86   000658  CF8C F001          	movff	3980,1
+    87   00065C  CF8B F002          	movff	3979,2
+    88   000660  0012               	return	
+    89                           tosu	equ	0xFFF
+    90                           tosh	equ	0xFFE
+    91                           tosl	equ	0xFFD
+    92                           stkptr	equ	0xFFC
+    93                           pclatu	equ	0xFFB
+    94                           pclath	equ	0xFFA
+    95                           pcl	equ	0xFF9
+    96                           tblptru	equ	0xFF8
+    97                           tblptrh	equ	0xFF7
+    98                           tblptrl	equ	0xFF6
+    99                           tablat	equ	0xFF5
+   100                           prodh	equ	0xFF4
+   101                           prodl	equ	0xFF3
+   102                           indf0	equ	0xFEF
+   103                           postinc0	equ	0xFEE
+   104                           postdec0	equ	0xFED
+   105                           preinc0	equ	0xFEC
+   106                           plusw0	equ	0xFEB
+   107                           fsr0h	equ	0xFEA
+   108                           fsr0l	equ	0xFE9
+   109                           wreg	equ	0xFE8
+   110                           indf1	equ	0xFE7
+   111                           postinc1	equ	0xFE6
+   112                           postdec1	equ	0xFE5
+   113                           preinc1	equ	0xFE4
+   114                           plusw1	equ	0xFE3
+   115                           fsr1h	equ	0xFE2
+   116                           fsr1l	equ	0xFE1
+   117                           bsr	equ	0xFE0
+   118                           indf2	equ	0xFDF
+   119                           postinc2	equ	0xFDE
+   120                           postdec2	equ	0xFDD
+   121                           preinc2	equ	0xFDC
+   122                           plusw2	equ	0xFDB
+   123                           fsr2h	equ	0xFDA
+   124                           fsr2l	equ	0xFD9
+   125                           status	equ	0xFD8
+
+
+Microchip Technology PIC18 Macro Assembler V2.45 build 20230818022343 
+Symbol Table                                                                                               Thu Oct 19 10:32:51 2023
+
+                         add 0646                          LATA 0F89                          LATB 0F8A  
+                        LATC 0F8B                          LATD 0F8C                          WREG 0FE8  
+                        next 0632                          loop 062A                         final 0658  
+                       start 0626                        next_2 0608                       isa$std 0001  
+                preprocess_1 060E                  preprocess_2 0618                   sign_unsign 0650  
+                   isa$xinst 0000                 _multi_signed 0602  
